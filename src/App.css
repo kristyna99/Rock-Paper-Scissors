@@ -1,38 +1,170 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.choices {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.choice-btn {
+  border: 5px solid transparent; /* Transparentní border výchozí */
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease; /* Plynulý přechod pro border-color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.choice-btn:hover {
+  border-color: red; /* Změna barvy borderu po najetí myší */
+}
+
+.choice-btn img {
+  width: 60%;
+  height: 60%;
+}
+
+.rules-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f39c12; /* Přidáno pro jasnější barvu */
+  color: #fff; /* Bílý text pro lepší kontrast */
+}
+
+.rules-btn:hover {
+  background-color: #e67e22; /* Změna barvy na hover */
+}
+
+.rules-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.rules-content h2 {
+  margin-top: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-btn span {
+  font-size: 30px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-choice, .computer-choice {
+  text-align: center;
+}
+
+.user-choice img, .computer-choice img {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+}
+
+.result-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .choices {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .choice-btn {
+    width: 80px;
+    height: 80px;
+  }
+
+  .choice-btn img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .result {
+    flex-direction: column;
+  }
+
+  .user-choice img, .computer-choice img {
+    width: 80px;
+  }
+
+  .result-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .rules-content {
+    padding: 10px;
+  }
+
+  .choice-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .choice-btn img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .user-choice img, .computer-choice img {
+    width: 60px;
+  }
+
+  .result-text {
+    font-size: 16px;
+  }
+
+  .result {
+    flex-direction: column;
   }
 }

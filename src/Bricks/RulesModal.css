@@ -1,0 +1,55 @@
+.rules-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rules-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    color: #e67e22;
+  }
+  
+  .rules-content h2 {
+    margin-top: 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close-btn span {
+    font-size: 30px;
+  }
+  
+  .rules-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #f39c12; /* Přidáno pro jasnější barvu */
+    color: #fff; /* Bílý text pro lepší kontrast */
+  }
+  
+  .rules-btn:hover {
+    background-color: #e67e22; /* Změna barvy na hover */
+  }
+  

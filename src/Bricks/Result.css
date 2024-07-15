@@ -1,0 +1,28 @@
+.result {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .user-choice, .computer-choice {
+    text-align: center;
+  }
+  
+  .user-choice img, .computer-choice img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .result-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .result {
+      flex-direction: column;
+    }
+  }
+  

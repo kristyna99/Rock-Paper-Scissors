@@ -1,0 +1,59 @@
+.choices {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.choice-btn {
+  border: 5px solid transparent;
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.choice-btn:hover {
+  border-color: red;
+}
+
+.choice-btn img {
+  width: 60%;
+  height: 60%;
+}
+
+.choice-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid red;
+  z-index: -1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .choices {
+    flex-direction: row; /* Volby budou vedle sebe */
+    overflow-x: auto; /* Přidáváme scrollování, pokud se nevejdou na šířku */
+  }
+
+  .choice-btn {
+    width: 80px;
+    height: 80px;
+    margin: 10px; /* Menší mezery mezi tlačítky */
+  }
+
+  .choice-btn img {
+    width: 50%;
+    height: 50%;
+  }
+}
